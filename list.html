@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+</head>
+<body>
+<a href="main.html">Самые быстрые самолёты</a><br>
+<a href="list.html">Список самолётов</a><br>
+<hr>
+<p>
+  <details>
+  <summary>График</summary>
+  <form>
+  <table>
+    <tr align="center">
+      <th>
+        <strong>Значение по оси OX</strong>
+      </th>
+      <th>
+        <strong>Результат</strong>
+      </th>
+    </tr>
+    <tr align="left">
+      <td>
+        <label><input type="radio" name="choose OX" value="type"> Тип</label>
+      </td>
+      <td>
+        <label><input type="checkbox" name="choose result" value="maxSpeed"> Максимальная скорость</label>
+      </td>
+    </tr>
+    <tr align="left">
+      <td>
+        <label><input type="radio" name="choose OX" value="country">Страна</label>
+      </td>
+      <td>
+        <label><input type="checkbox" name="choose result" value="weight">Вес</label>
+      </td>
+    </tr>
+    <tr align="left">
+      <td>
+        <label><input type="radio" name="choose OX" value="year">Год</label>
+      </td>
+      <td>
+        <label><input type="checkbox" name="choose result" value="maxHeight">Максимальная высота</label>
+      </td>
+    </tr>
+
+  </table>
+  </form>
+  <input type="button" value="Построить">
+</details>
+<p>
+  <details>
+  <summary>Фильтр</summary>
+  <form>
+  <label>Название: <input type="text" name="name"></label><br>
+  <label>Тип: <input type="text" name="type"></label><br>
+  <label>Страна: <input type="text" name="countryFilter"></label><br>
+    <label>Максимальная скорость: <input type="text" name="maxSpeed" ></label><br>
+  Год: <label>от<input type="text" name="yearOT"></label> <label>до <input type="text" name="yearDO"></label><br>
+  Высота: <label>от<input type="text" name="heightOT"></label> <label>до <input type="text" name="heightDO"></label><br>
+  </form>
+  <input type="button" value="Найти">
+</details>
+<details>
+  <summary>Сортировка</summary>
+  <form>
+  Первый уровень:<label>
+  <select>
+  <option value="0">Нет</option>
+</select>
+</label><label>по убыванию?<input type="checkbox" name="filter"></label><br>
+  Второй уровень:<label>
+  <select>
+  <option value="0">Нет</option>
+</select>
+</label>по убыванию?<label><input type="checkbox" name="filter"></label><br>
+  Третий уровень:<label>
+  <select>
+  <option value="0">Нет</option>
+</select>
+</label>по убыванию?<label><input type="checkbox" name="filter"></label><br>
+  </form>
+</details>
+<h2>Список самолётов</h2>
+
+<table border="1">
+  <tr>
+    <th>Название</th>
+    <th>Тип</th>
+    <th>Страна</th>
+    <th>Год создания</th>
+    <th>Макс скорость (Мах)</th>
+    <th>Вес</th>
+    <th>Макс. высота</th>
+  </tr>
+  <tr>
+    <td>Boeing 747-8</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>2011</td>
+    <td>0.85</td>
+    <td>447,700 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A380</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>2007</td>
+    <td>0.90</td>
+    <td>560,000 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>Lockheed SR-71 Blackbird</td>
+    <td>Разведывательный</td>
+    <td>США</td>
+    <td>1964</td>
+    <td>3.3</td>
+    <td>77,100 кг</td>
+    <td>25,900 м</td>
+  </tr>
+  <tr>
+    <td>Concorde</td>
+    <td>Пассажирский</td>
+    <td>Франция, Великобритания</td>
+    <td>1969</td>
+    <td>2.05</td>
+    <td>185,000 кг</td>
+    <td>18,000 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 777-300ER</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>2004</td>
+    <td>0.89</td>
+    <td>347,500 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A350-900</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>2014</td>
+    <td>0.87</td>
+    <td>280,000 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>F-22 Raptor</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1997</td>
+    <td>2.25</td>
+    <td>83,500 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Sukhoi Su-57</td>
+    <td>Истребитель</td>
+    <td>Россия</td>
+    <td>2010</td>
+    <td>2.5</td>
+    <td>40,000 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Eurofighter Typhoon</td>
+    <td>Истребитель</td>
+    <td>Европа</td>
+    <td>2003</td>
+    <td>2.34</td>
+    <td>23,500 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Dassault Rafale</td>
+    <td>Истребитель</td>
+    <td>Франция</td>
+    <td>2001</td>
+    <td>2.2</td>
+    <td>24,500 кг</td>
+    <td>15,000 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 787 Dreamliner</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>2011</td>
+    <td>0.85</td>
+    <td>233,000 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A330-300</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>1993</td>
+    <td>0.88</td>
+    <td>233,000 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>F-35 Lightning II</td>
+    <td>Многоцелевой истребитель</td>
+    <td>США</td>
+    <td>2006</td>
+    <td>1.6</td>
+    <td>31,700 кг</td>
+    <td>18,300 м</td>
+  </tr>
+  <tr>
+    <td>C-17 Globemaster III</td>
+    <td>Военный транспортный самолет</td>
+    <td>США</td>
+    <td>1993</td>
+    <td>0.78</td>
+    <td>129,800 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 767-300ER</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1982</td>
+    <td>0.84</td>
+    <td>187,000 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A320-200</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>1987</td>
+    <td>0.82</td>
+    <td>78,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>F-16 Fighting Falcon</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1974</td>
+    <td>2.05</td>
+    <td>19,000 кг</td>
+    <td>15,200 м</td>
+  </tr>
+  <tr>
+    <td>Sukhoi Su-35</td>
+    <td>Истребитель</td>
+    <td>Россия</td>
+    <td>2008</td>
+    <td>2.35</td>
+    <td>18,400 кг</td>
+    <td>18,000 м</td>
+  </tr>
+  <tr>
+    <td>Eurofighter Typhoon</td>
+    <td>Истребитель</td>
+    <td>Европа</td>
+    <td>2003</td>
+    <td>2.34</td>
+    <td>23,500 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Dassault Rafale</td>
+    <td>Истребитель</td>
+    <td>Франция</td>
+    <td>2001</td>
+    <td>2.2</td>
+    <td>24,500 кг</td>
+    <td>15,000 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 737-800</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1997</td>
+    <td>0.82</td>
+    <td>79,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A321-200</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>1994</td>
+    <td>0.84</td>
+    <td>93,500 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>F-18 Super Hornet</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1995</td>
+    <td>1.8</td>
+    <td>29,900 кг</td>
+    <td>15,200 м</td>
+  </tr>
+  <tr>
+    <td>C-130 Hercules</td>
+    <td>Военный транспортный самолет</td>
+    <td>США</td>
+    <td>1954</td>
+    <td>0.52</td>
+    <td>41,000 кг</td>
+    <td>7,600 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 757-200</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1982</td>
+    <td>0.84</td>
+    <td>108,800 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A340-600</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>2002</td>
+    <td>0.87</td>
+    <td>275,000 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>F-15 Eagle</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1972</td>
+    <td>2.5</td>
+    <td>29,700 кг</td>
+    <td>18,300 м</td>
+  </tr>
+  <tr>
+    <td>Sukhoi Su-34</td>
+    <td>Бомбардировщик</td>
+    <td>Россия</td>
+    <td>2014</td>
+    <td>1.2</td>
+    <td>45,100 кг</td>
+    <td>14,000 м</td>
+  </tr>
+  <tr>
+    <td>Eurofighter Typhoon</td>
+    <td>Истребитель</td>
+    <td>Европа</td>
+    <td>2003</td>
+    <td>2.34</td>
+    <td>23,500 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Dassault Rafale</td>
+    <td>Истребитель</td>
+    <td>Франция</td>
+    <td>2001</td>
+    <td>2.2</td>
+    <td>24,500 кг</td>
+    <td>15,000 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 737 MAX 8</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>2017</td>
+    <td>0.84</td>
+    <td>85,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A320neo</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>2015</td>
+    <td>0.85</td>
+    <td>78,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>F/A-18E/F Super Hornet</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1995</td>
+    <td>1.8</td>
+    <td>29,900 кг</td>
+    <td>15,200 м</td>
+  </tr>
+  <tr>
+    <td>C-17 Globemaster III</td>
+    <td>Военный транспортный самолет</td>
+    <td>США</td>
+    <td>1993</td>
+    <td>0.78</td>
+    <td>129,800 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 767-300ER</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1982</td>
+    <td>0.84</td>
+    <td>187,000 кг</td>
+    <td>13,100 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A320-200</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>1987</td>
+    <td>0.82</td>
+    <td>78,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>F-16 Fighting Falcon</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1974</td>
+    <td>2.05</td>
+    <td>19,000 кг</td>
+    <td>15,200 м</td>
+  </tr>
+  <tr>
+    <td>Sukhoi Su-35</td>
+    <td>Истребитель</td>
+    <td>Россия</td>
+    <td>2008</td>
+    <td>2.35</td>
+    <td>18,400 кг</td>
+    <td>18,000 м</td>
+  </tr>
+  <tr>
+    <td>Eurofighter Typhoon</td>
+    <td>Истребитель</td>
+    <td>Европа</td>
+    <td>2003</td>
+    <td>2.34</td>
+    <td>23,500 кг</td>
+    <td>20,000 м</td>
+  </tr>
+  <tr>
+    <td>Dassault Rafale</td>
+    <td>Истребитель</td>
+    <td>Франция</td>
+    <td>2001</td>
+    <td>2.2</td>
+    <td>24,500 кг</td>
+    <td>15,000 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 737-800</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1997</td>
+    <td>0.82</td>
+    <td>79,000 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A321-200</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>1994</td>
+    <td>0.84</td>
+    <td>93,500 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>F-18 Super Hornet</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1995</td>
+    <td>1.8</td>
+    <td>29,900 кг</td>
+    <td>15,200 м</td>
+  </tr>
+  <tr>
+    <td>C-130 Hercules</td>
+    <td>Военный транспортный самолет</td>
+    <td>США</td>
+    <td>1954</td>
+    <td>0.52</td>
+    <td>41,000 кг</td>
+    <td>7,600 м</td>
+  </tr>
+  <tr>
+    <td>Boeing 757-200</td>
+    <td>Пассажирский</td>
+    <td>США</td>
+    <td>1982</td>
+    <td>0.84</td>
+    <td>108,800 кг</td>
+    <td>12,500 м</td>
+  </tr>
+  <tr>
+    <td>Airbus A340-600</td>
+    <td>Пассажирский</td>
+    <td>Европа</td>
+    <td>2002</td>
+    <td>0.87</td>
+    <td>275,000 кг</td>
+    <td>13,700 м</td>
+  </tr>
+  <tr>
+    <td>F-15 Eagle</td>
+    <td>Истребитель</td>
+    <td>США</td>
+    <td>1972</td>
+    <td>2.5</td>
+    <td>29,700 кг</td>
+    <td>18,300 м</td>
+  </tr>
+  <tr>
+    <td>Sukhoi Su-34</td>
+    <td>Бомбардировщик</td>
+    <td>Россия</td>
+    <td>2014</td>
+    <td>1.2</td>
+    <td>45,100 кг</td>
+    <td>14,000 м</td>
+  </tr>
+</table>
+
+</body>
+</html>
