@@ -1,0 +1,106 @@
+.menu div{
+  float: right;
+
+  display: inline-block;
+  padding: 1px 25px 15px 5px;
+}
+.leftMenu{
+  margin-top:0;
+  text-align: left;
+}
+
+.leftMenu a{
+  text-decoration: none;
+  color:black;
+}
+
+.menuBackground{
+  margin-top:0;
+  background-image: url("https://avatars.mds.yandex.net/i?id=aa423adf9343ef64bc36eac20f626500_l-5254505-images-thumbs&n=13");
+}
+.menuTitle{
+  margin-top:200px;
+  display: block;
+  font-size: xxx-large;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chosen{
+  background-color: RGBA(255, 255, 255, 20%);
+}
+
+.main{
+  display: inline-block;
+}
+.main div{
+
+}
+
+.mainBigTitle{
+  width: 45%;
+  float: left;
+  margin-top:20px;
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.mainBigTitle div{
+  text-align: center;
+}
+
+.mainBigTitle img{
+
+  max-width:100%;
+  height:auto;
+  background-color: #b3d4fc;
+  padding: 5px;
+}
+
+.mainSmallTitle{
+  background-color: snow;
+  width: 20%;
+  float:right;
+  display: inline-block;
+  margin-right: 200px;
+  margin-left: auto;
+  margin-top:20px;
+}
+
+.mainSmallTitleTop{
+  display: inline-block;
+  margin-right: 100px;
+  width: 100%;
+
+}
+
+.mainSmallTitleTop img{
+  background-color: #b3d4fc;
+  max-width:70%;
+  height:auto;
+  padding: 5px;
+  float:left;
+}
+
+.mainSmallTitleBottom{
+}
+
+.endText{
+  width: 100%;
+  display: inline-block;
+}
+
+.endText div{
+  display: inline;
+}
+
+.endTextFIO{
+float: left
+}
+
+.endTextContact{
+  float: right;
+}
+
