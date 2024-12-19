@@ -1,0 +1,48 @@
+.menu-tittle{
+  text-align: center;
+  font-size: 26px;
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  right: 51%;
+}
+
+.menu-background{
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background-image: url("https://avatars.mds.yandex.net/i?id=aa423adf9343ef64bc36eac20f626500_l-5254505-images-thumbs&n=13");
+}
+
+.smallBlock{
+  display: grid;
+  max-width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img title"
+                       "text text";
+}
+.smallBlock > .img{
+  grid-area: img;
+}
+
+.smallBlock > .title{
+  padding-left: 5px;
+  margin-top: 25%;
+  font-weight: bold;
+  grid-area: title;
+}
+
+.smallBlock > .text {
+  grid-area: text;
+}
+
+.img > img{
+  max-width:100%;
+  height:auto;
+  background-color: #b3d4fc;
+  padding: 5px;
+}
