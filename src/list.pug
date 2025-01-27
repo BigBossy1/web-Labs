@@ -1,0 +1,116 @@
+extends template
+
+block menu
+	menu
+		nav
+			+createMenu(dictMenu, 'Список самолётов') 
+		br
+		br
+		br
+		br
+		br
+		br
+		h2="Самолёты"
+
+block content
+	inputs
+		details
+			summary Граф
+			form
+				p
+					| Значение по оси OX:
+					br
+					label
+						input(type="radio" name="type" value="m")
+						|Тип
+					br
+					label
+						input(type="radio" name="country" value="c")
+						|Страна
+					br
+					label
+						input(type="radio" name="year" value="y")
+						|Год
+				label
+					input(type="checkbox" name="maxSpeed" value="0")
+					|Максимальная скорость
+				br
+				label
+					input(type="checkbox" name="maxWeight" value="0")
+					|Максимальный вес
+				br
+				label
+					input(type="checkbox" name="maxAlt" value="0")
+					|Максимальная высота
+				br
+				label
+					button(type="submit") Построить
+		details
+			summary Фильтр
+			br
+			label(for="plane-name")
+			|Название
+			br
+			input#plane-name(type="text" name="planeName" required)
+			br
+			label(for="plane-type")
+			|Тип
+			br
+			input#plane-type(type="text" name="planeType" required)
+			br
+			label(for="plane-country")
+			|Страна
+			br
+			input#plane-country(type="text" name="planeCountry" required)
+			br
+			label(for="plane-speed")
+			|Максимальная скорость
+			br
+			input#plane-speed(type="text" name="planeSpeed" required)
+			br
+			label Год:
+			div
+				span от
+				input#start-year(type="number" name="fromYear" required)
+				span до
+				input#end-year(type="number" name="endYead" required)
+			br
+			label Высота:
+			div
+				span от
+				input#start-height(type="number" name="fromHeight" required)
+				span до
+				input#end-height(type="number" name="endHeight" required)
+			br
+		details
+			summary Сортировка
+			form
+				p Первый уровень:
+				select
+					option(value="0" selected) Нет
+				p Второй уровень уровень:
+				select
+					option(value="0" selected) Нет
+				p Третий уровень:
+				select
+					option(value="0" selected) Нет
+				br
+				button#sortedBtn.complete-botton(tybe="submit") Отсортировать
+		table.record-table(border="2")
+			tr.table-header
+				th Название
+				th Тип
+				th Страна
+				th Год создания
+				th Макс скорость
+				th Вес
+				th Макс. высота
+			each plane in data2.planes
+				tr
+					td= plane.planeName
+					td= plane.type
+					td= plane.country
+					td= plane.year
+					td= plane.maxSpeed
+					td= plane.weight
+					td= plane.maxAlt

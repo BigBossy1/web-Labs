@@ -1,0 +1,27 @@
+mixin createMenu(menu, active)
+	each value, key in menu
+		if active == key
+			a.active(href= value)= key
+		else
+			a(href= value)= key
+
+mixin sectionBlock(name1, name2, image1, image2, text)
+	sectionBlock
+		bigBlock
+			img(src= require("./images/" + image1) alt="#")
+			h3=name1
+		smallBlock
+			img(src= require("./images/" + image2) alt="#")
+			h4=name2
+			p=text
+			
+
+mixin createMenuBuild(menu, active)
+	
+	each value, key in menu
+		if key === "Главная"
+			a(href=value)= key
+			if active
+				a.active(href="#")= active
+			else
+				a(href=value)= key

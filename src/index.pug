@@ -1,0 +1,16 @@
+extends template 
+    
+block menu
+	menu
+		nav
+			+createMenu(dictMenu, 'Главная') 
+		br
+		br
+		br
+		br
+		br
+		br
+		h2="Самолёты"
+block content
+	each item in listSections
+		+sectionBlock(item.name1, item.name2, item.image1, item.image2, item.text)

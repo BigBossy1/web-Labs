@@ -1,0 +1,68 @@
+content
+	text-align justify
+
+menu
+	background= "./images/background.png"
+	text-align center
+
+html
+	color colorText
+
+article
+	display grid
+	grid-template-colums repeat(3, 1fr)
+	
+section
+	display grid
+	grid-template-colums 1fr 2fr
+	
+image grid	
+	grid-template-colums repeat(5, 1fr)
+	
+sectionBlock
+	display grid
+	grid-gap 40px
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: repeat(1, 1fr);
+
+bigBlock
+	text-align center
+
+smallBlock
+	text-align justify
+
+img
+	max-width 100%
+	height:auto
+	background-color: #b3d4fc;
+	padding: 5px;
+	transition: transform 0.2s;
+
+img:hover
+	transform scale(1.01)
+
+menu
+	background url('../images/background.jpg') 100% 100% repeat
+	
+	
+nav
+	text-align right
+	& a
+		display inline-block
+		padding 1%
+		color white
+		text-decoration: none
+		&:hover
+		&.active
+			background-color RGBA(255, 255, 255, 20%);
+			color #f8f8f8 
+			
+footer
+	background-color gray
+	& h4
+		padding 5px
+		color #f8f8f8
+
+@media screen and (max-width: 600px)
+	sectionBlock
+		grid-template-columns: 1fr;

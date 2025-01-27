@@ -1,0 +1,103 @@
+block variables
+    - var title = 'Самолёты'
+    
+    //-
+        словарь для описания меню: элемент меню и название файла
+    -
+        var dictMenu = { 
+            'Главная': 'index.html', 
+            'Список самолётов': "list.html",  
+            'Миг-25': "mig-25.html"
+        }
+    //-
+        список файлов с рисунками для раздела сайта images
+    - 
+        var listImages = ['image1_1.jpg', 'image1_2.jpg', 'image2_1.jpg', 'image2_2.jpg', 'image3_1.jpg', 'image3_2.jpg', 'image4_1.jpg', 'image4_2.jpg']
+
+    
+    //-
+        словарь для карточек (раздел section): заголовок, рисунок, текст
+    - 
+        var listSections = [
+            {
+                'name1': 'NASA X-43',
+                'name2': 'Beechcraft Starship',
+                'image1': 'image1_1.jpg',
+                'image2': 'image1_2.jpg', 
+                'text': 'Эта модель создавалась, чтобы за счёт удешевления эксплуатации составить конкуренцию реактивным бизнес-самолётам. Разработчики использовали аэродинамическую схему «утка» — вынесли стабилизаторы вперёд фюзеляжа, а оперение с рулями направления разместили на законцовках смещённого назад крыла. На нём же расположили два турбовинтовых толкающих двигателя — то есть пропеллеры у них были сзади.'
+            },
+            {
+                'name1': 'NASA X-15',
+                'name2': 'Vought V-173',
+                'image1': 'image2_1.jpg',
+                'image2': 'image2_2.jpg', 
+                'text': 'Этот самолёт еще часто называют «летающий блин» «Flying pancake» — экспериментальный самолет вертикального взлета и посадки (СВВП), построенный Чарльзом Циммерманом, немецким аэродинамиком, эмигрировавшим в США'
+            },
+            {
+                'name1': 'Lockheed SR-71 Blackbird',
+                'name2': 'Boeing 747',
+                'image1': 'image3_1.jpg',
+                'image2': 'image3_2.jpg', 
+                'text': 'Boeing 747 — четырёхдвигательный, первый в мире дальнемагистральный двухпалубный широкофюзеляжный пассажирский самолёт. Первый полёт был выполнен 9 февраля 1969 года. На момент своего создания Боинг 747 был самым большим, тяжёлым и вместительным пассажирским авиалайнером, оставаясь таковым в течение 36 лет, до появления A380, первый полёт которого состоялся в 2005 году.'
+            },
+            {
+                'name1': 'Convair V2 Sea Dart',
+                'name2': 'Lockheed C-130',
+                'image1': 'image4_1.jpg',
+                'image2': 'image4_2.jpg', 
+                'text': 'Lockheed C-130 Hercules — американский военно-транспортный самолёт средней и большой дальности. Основной военно-транспортный самолёт США, стран НАТО и ряда других стран. В базовой комплектации C-130 может перевозить 78 военнослужащих или 92, если используется конфигурация с высокой плотностью размещения, 64 десантника или 74 носилки.'
+            }
+        ]
+
+    -
+        var data2 = {
+            planes: [
+                {planeName: "Boeing 747", type: "Пассажирский", country: "США", year: "1969", maxSpeed: "988 км/ч", weight: "183500 кг", maxAlt: "13700 м"},
+                {planeName: "Airbus A380", type: "Пассажирский", country: "Европа", year: "2005", maxSpeed: "1020 км/ч", weight: "276800 кг", maxAlt: "13100 м"},
+                {planeName: "Lockheed SR-71 Blackbird", type: "Разведчик", country: "США", year: "1964", maxSpeed: "3540 км/ч", weight: "30600 кг", maxAlt: "25900 м"},
+                {planeName: "Cessna 172 Skyhawk", type: "Легкий", country: "США", year: "1955", maxSpeed: "226 км/ч", weight: "767 кг", maxAlt: "4115 м"},
+                {planeName: "F-16 Fighting Falcon", type: "Истребитель", country: "США", year: "1974", maxSpeed: "2414 км/ч", weight: "8570 кг", maxAlt: "15240 м"},
+                {planeName: "Ан-225 Мрия", type: "Транспортный", country: "СССР", year: "1988", maxSpeed: "850 км/ч", weight: "285000 кг", maxAlt: "11000 м"},
+                {planeName: "Concorde", type: "Пассажирский сверхзвуковой", country: "Европа", year: "1969", maxSpeed: "2179 км/ч", weight: "78700 кг", maxAlt: "18300 м"},
+                {planeName: "Boeing 737", type: "Пассажирский", country: "США", year: "1967", maxSpeed: "946 км/ч", weight: "41400 кг", maxAlt: "12500 м"},
+                {planeName: "Ил-76", type: "Транспортный", country: "СССР", year: "1971", maxSpeed: "850 км/ч", weight: "92500 кг", maxAlt: "12000 м"},
+                {planeName: "Airbus A320", type: "Пассажирский", country: "Европа", year: "1987", maxSpeed: "870 км/ч", weight: "42400 кг", maxAlt: "12100 м"},
+                {planeName: "МиГ-29", type: "Истребитель", country: "СССР", year: "1977", maxSpeed: "2400 км/ч", weight: "11000 кг", maxAlt: "18000 м"},
+                {planeName: "Ту-154", type: "Пассажирский", country: "СССР", year: "1968", maxSpeed: "975 км/ч", weight: "55000 кг", maxAlt: "12100 м"},
+                {planeName: "Bombardier CRJ700", type: "Региональный", country: "Канада", year: "1999", maxSpeed: "883 км/ч", weight: "19500 кг", maxAlt: "12500 м"},
+                {planeName: "Sukhoi Superjet 100", type: "Региональный", country: "Россия", year: "2008", maxSpeed: "870 км/ч", weight: "25150 кг", maxAlt: "12200 м"},
+                {planeName: "Embraer ERJ 145", type: "Региональный", country: "Бразилия", year: "1995", maxSpeed: "833 км/ч", weight: "11800 кг", maxAlt: "11200 м"},
+                {planeName: "Boeing 787 Dreamliner", type: "Пассажирский", country: "США", year: "2009", maxSpeed: "950 км/ч", weight: "119900 кг", maxAlt: "13100 м"},
+                {planeName: "F-22 Raptor", type: "Истребитель", country: "США", year: "1997", maxSpeed: "2410 км/ч", weight: "19700 кг", maxAlt: "20000 м"},
+                {planeName: "Su-27", type: "Истребитель", country: "СССР", year: "1977", maxSpeed: "2500 км/ч", weight: "16380 кг", maxAlt: "18500 м"},
+                {planeName: "A-10 Thunderbolt II", type: "Штурмовик", country: "США", year: "1972", maxSpeed: "706 км/ч", weight: "11300 кг", maxAlt: "13600 м"},
+                {planeName: "DHC-6 Twin Otter", type: "Многоцелевой", country: "Канада", year: "1965", maxSpeed: "314 км/ч", weight: "3360 кг", maxAlt: "7620 м"},
+                {planeName: "Beechcraft King Air", type: "Деловой", country: "США", year: "1964", maxSpeed: "574 км/ч", weight: "3500 кг", maxAlt: "10670 м"},
+                {planeName: "Ан-2", type: "Многоцелевой", country: "СССР", year: "1947", maxSpeed: "258 км/ч", weight: "3450 кг", maxAlt: "4500 м"},
+                {planeName: "Як-40", type: "Региональный", country: "СССР", year: "1966", maxSpeed: "550 км/ч", weight: "9400 кг", maxAlt: "8100 м"},
+                {planeName: "P-51 Mustang", type: "Истребитель", country: "США", year: "1940", maxSpeed: "703 км/ч", weight: "3230 кг", maxAlt: "12800 м"},
+                {planeName: "Spitfire", type:"Истребитель", country:"Великобритания", year:"1936", maxSpeed:"594 км/ч", weight: "2300 кг", maxAlt:"10670 м"},
+                {planeName: "B-2 Spirit", type: "Бомбардировщик", country: "США", year:"1989", maxSpeed: "900 км/ч", weight: "71700 кг", maxAlt: "15200 м"},
+                {planeName: "F-35 Lightning II", type:"Многоцелевой истребитель", country: "США", year: "2006", maxSpeed:"1930 км/ч", weight:"13200 кг", maxAlt:"18200 м"},
+                {planeName: "Lockheed C-130 Hercules", type: "Транспортный", country: "США", year: "1954", maxSpeed: "592 км/ч", weight: "34400 кг", maxAlt: "10000 м"},
+                {planeName: "Gulfstream G650", type: "Деловой", country: "США", year: "2009", maxSpeed: "956 км/ч", weight: "24500 кг", maxAlt: "15500 м"},
+                {planeName: "Airbus A400M Atlas", type: "Транспортный", country: "Европа", year: "2009", maxSpeed: "780 км/ч", weight: "76500 кг", maxAlt: "11300 м"},
+                {planeName: "Saab JAS 39 Gripen", type: "Истребитель", country: "Швеция", year: "1988", maxSpeed: "2470 км/ч", weight: "6800 кг", maxAlt: "15200 м"},
+                {planeName: "Ту-160", type: "Бомбардировщик", country:"СССР", year: "1981", maxSpeed: "2200 км/ч", weight: "110000 кг", maxAlt: "16000 м"},
+                {planeName: "Hawker 800", type: "Деловой", country: "Великобритания", year:"1983", maxSpeed:"828 км/ч", weight:"6900 кг", maxAlt:"12500 м"},
+                {planeName: "Cessna Citation X", type: "Деловой", country: "США", year:"1996", maxSpeed: "977 км/ч", weight:"9800 кг", maxAlt: "15500 м"},
+                {planeName: "Antonov An-124", type: "Транспортный", country: "СССР", year: "1982", maxSpeed: "865 км/ч", weight: "175000 кг", maxAlt: "12000 м"},
+                {planeName: "Dassault Falcon 7X", type:"Деловой", country:"Франция", year:"2005", maxSpeed:"900 км/ч", weight:"15600 кг", maxAlt:"15500 м"},
+                {planeName: "De Havilland Beaver", type: "Многоцелевой", country:"Канада", year:"1947", maxSpeed: "260 км/ч", weight: "1500 кг", maxAlt: "5500 м"},
+                {planeName: "Boeing 777", type:"Пассажирский", country:"США", year:"1994", maxSpeed:"950 км/ч", weight:"145000 кг", maxAlt:"13100 м"},
+                {planeName: "MD-80", type:"Пассажирский", country:"США", year:"1979", maxSpeed:"926 км/ч", weight:"35000 кг", maxAlt:"11300 м"},
+                {planeName: "Supermarine Walrus", type: "Гидросамолет", country: "Великобритания", year: "1933", maxSpeed: "217 км/ч", weight: "2268 кг", maxAlt: "5640 м"},
+                {planeName: "Fokker 100", type: "Пассажирский", country: "Нидерланды", year: "1986", maxSpeed: "845 км/ч", weight: "24375 кг", maxAlt: "10700 м"},
+                {planeName: "Mitsubishi A6M Zero", type:"Истребитель", country:"Япония", year:"1940", maxSpeed:"533 км/ч", weight:"1700 кг", maxAlt:"10000 м"},
+                {planeName: "Ilyushin Il-2", type: "Штурмовик", country: "СССР", year: "1939", maxSpeed: "450 км/ч", weight: "4360 кг", maxAlt:"6000 м"},
+                {planeName: "Bell X-1", type: "Экспериментальный", country: "США", year:"1946", maxSpeed: "1100 км/ч", weight:"3100 кг", maxAlt:"21000 м"},
+                {planeName: "Airbus A350", type:"Пассажирский", country:"Европа", year:"2013", maxSpeed:"945 км/ч", weight:"220000 кг", maxAlt:"13100 м"},
+                {planeName: "Boeing C-17 Globemaster III", type:"Транспортный", country:"США", year:"1991", maxSpeed:"830 км/ч", weight:"128000 кг", maxAlt:"13700 м"},
+                {planeName: "Northrop Grumman B-21 Raider", type:"Бомбардировщик", country:"США", year:"2023", maxSpeed: "неизвестно", weight:"неизвестно", maxAlt:"неизвестно"}
+            ]
+     };
