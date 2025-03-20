@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Калька</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор комплексных чисел</h1>
+    <div class="form-choice">
+      <lebel for="form">Выберите форму представления:</lebel>
+      <select id="form">
+        <option value="algebraic">Алгебраическая(a+bi)</option>
+        <option value="trigonometric">Тригонометрическая (r(cos(x) + isin(x)))</option>
+      </select>
+    </div>
+    <button id="btnShowForm" class="bth">Показать</button>
+    <div id="inputForm">
+
+    </div>
+
+    <div class="form-group">
+      <label for="operations">Выберите операции</label>
+      <select id="operations" multiple class="form-control">
+        <option value="argument">Аргумент числа</option>
+        <option value="imaginary">Мнимая часть</option>
+        <option value="switchForm">Представление в другой форме</option>
+        <option value="module">Модуль числа</option>
+      </select>
+    </div>
+
+    <button id="calculate" class="bth">Вычислить</button>
+    <button id="clear" class="bth">Очистить</button>
+
+    <div id="results">
+    </div>
+  </div>
+  <script src="js/mainJs.js"></script>
+</body>
+</html>
